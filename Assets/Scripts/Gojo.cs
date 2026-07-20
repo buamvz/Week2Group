@@ -10,7 +10,7 @@ public class Gojo : Damagable
         base.TakeDamage(damageAmount);
     }
 
-    public void Dead()
+    public override void Dead()
     {
         base.Dead();
         Debug.Log("Dead");

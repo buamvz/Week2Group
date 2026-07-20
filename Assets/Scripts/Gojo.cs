@@ -1,35 +1,22 @@
 using UnityEngine;
 using UnityEngine.InputSystem.Processors;
 
-public class Gojo : MonoBehaviour
+public class Gojo : Damagable
 {
 
     [SerializeField] int hp;
 
-    public void TakeDamage(int damageAmount)
+    public override void TakeDamage(int damageAmount)
     {
-        hp -= damageAmount;
-        if (hp <= 0)
-        {
-            Dead();
-        }
+        base.TakeDamage(damageAmount);
     }
 
     public void Dead()
     {
+        base.Dead();
         Debug.Log("Dead");
     }
 
 
-
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    
 }

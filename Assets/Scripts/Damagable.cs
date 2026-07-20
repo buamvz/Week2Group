@@ -6,7 +6,7 @@ public class Damagable : MonoBehaviour
 
     [SerializeField] int hp;
 
-    public void TakeDamage(int damageAmount)
+    public virtual void TakeDamage(int damageAmount)
     {
         hp -= damageAmount;
         if (hp <= 0)
@@ -15,9 +15,9 @@ public class Damagable : MonoBehaviour
         }
     }
 
-    public void Dead()
+    public virtual void Dead()
     {
-        Debug.Log("Dead");
+        Debug.Log("Dead NOOOOO");
     }
 
 

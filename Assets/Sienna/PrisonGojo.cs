@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PrisonGojo : Damagable
 {
-    [SerializeField] int hp;
 
     public override void TakeDamage(int damageAmount)
     {

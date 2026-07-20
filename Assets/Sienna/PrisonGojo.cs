@@ -1,20 +1,17 @@
 using UnityEngine;
 
-public class PrisonGojo : MonoBehaviour
+public class PrisonGojo : Damagable
 {
     [SerializeField] int hp;
 
-    public void TakeDamage(int damageAmount)
+    public override void TakeDamage(int damageAmount)
     {
-        hp -= damageAmount;
-        if (hp <= 0)
-        {
-            Dead();
-        }
+        base.TakeDamage(damageAmount);
     }
 
-    public void Dead()
+    public override void Dead()
     {
+        base.Dead();
         Debug.Log("Gojo prison realm is freed!");
     }
 

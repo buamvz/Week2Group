@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Hit Cirle
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -403,8 +403,9 @@ GameObject:
   - component: {fileID: 424220112}
   - component: {fileID: 424220111}
   - component: {fileID: 424220110}
+  - component: {fileID: 424220113}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Hit Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -474,10 +475,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1816051754}
-        m_TargetAssemblyTypeName: Damagable, Assembly-CSharp
-        m_MethodName: TakeDamage
-        m_Mode: 3
+      - m_Target: {fileID: 424220113}
+        m_TargetAssemblyTypeName: PlayerAttack, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -524,6 +525,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 424220108}
   m_CullTransparentMesh: 1
+--- !u!114 &424220113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424220108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce27bafc87ed5d647895d1c68792e901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  damageAmount: 1
+  hitObject: {fileID: 2143387475}
+--- !u!1001 &606964182
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 256725582637049929, guid: de11333297c071444b34c19e14a2c74f, type: 3}
+      propertyPath: m_Name
+      value: PrisonGojo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985820180661142846, guid: de11333297c071444b34c19e14a2c74f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.556
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985820180661142846, guid: de11333297c071444b34c19e14a2c74f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.357
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985820180661142846, guid: de11333297c071444b34c19e14a2c74f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985820180661142846, guid: de11333297c071444b34c19e14a2c74f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985820180661142846, guid: de11333297c071444b34c19e14a2c74f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985820180661142846, guid: de11333297c071444b34c19e14a2c74f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985820180661142846, guid: de11333297c071444b34c19e14a2c74f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985820180661142846, guid: de11333297c071444b34c19e14a2c74f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985820180661142846, guid: de11333297c071444b34c19e14a2c74f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985820180661142846, guid: de11333297c071444b34c19e14a2c74f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920290759043218680, guid: de11333297c071444b34c19e14a2c74f, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1378708753}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: de11333297c071444b34c19e14a2c74f, type: 3}
 --- !u!1 &716323576
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,6 +829,63 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &1071548949
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 826453443125701454, guid: 5fc863fbfe53e8144856b101a04b0f80, type: 3}
+      propertyPath: m_Name
+      value: Gojo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168402401811738533, guid: 5fc863fbfe53e8144856b101a04b0f80, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168402401811738533, guid: 5fc863fbfe53e8144856b101a04b0f80, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.357
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168402401811738533, guid: 5fc863fbfe53e8144856b101a04b0f80, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.923
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168402401811738533, guid: 5fc863fbfe53e8144856b101a04b0f80, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168402401811738533, guid: 5fc863fbfe53e8144856b101a04b0f80, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168402401811738533, guid: 5fc863fbfe53e8144856b101a04b0f80, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168402401811738533, guid: 5fc863fbfe53e8144856b101a04b0f80, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168402401811738533, guid: 5fc863fbfe53e8144856b101a04b0f80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168402401811738533, guid: 5fc863fbfe53e8144856b101a04b0f80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168402401811738533, guid: 5fc863fbfe53e8144856b101a04b0f80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5fc863fbfe53e8144856b101a04b0f80, type: 3}
 --- !u!1 &1378708751
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,7 +1010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ff052cbe0a789843b124d38e37d58db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Damagable
-  hp: 0
+  hp: 1
 --- !u!135 &1816051755
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1050,6 +1183,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2143387475 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 826453443125701454, guid: 5fc863fbfe53e8144856b101a04b0f80, type: 3}
+  m_PrefabInstance: {fileID: 1071548949}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1060,3 +1198,5 @@ SceneRoots:
   - {fileID: 92087501}
   - {fileID: 1004162564}
   - {fileID: 1899868842}
+  - {fileID: 606964182}
+  - {fileID: 1071548949}
